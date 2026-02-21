@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--strawberry-red: #e54b4bff;
+	--tangerine-dream: #ffa987ff;
+	--seashell: #f7ebe8ff;
+	--graphite: #444140ff;
+	--shadow-grey: #1e1e24ff;
+
+	/* The "Black" and "White" of your site */
+	--background: var(--seashell); /* Seashell */
+	--foreground: var(--shadow-grey); /* Shadow Grey */
+
+	/* The "Branding" */
+	--primary: var(--strawberry-red); /* Strawberry Red */
+	--primary-foreground: var(--seashell); /* Text on Red buttons */
+
+	/* The "Details" */
+	--muted: var(--graphite); /* Graphite */
+	--border: rgba(68, 65, 64, 0.2); /* Faint Graphite */
+	--accent: var(--tangerine-dream); /* Tangerine */
+}
+
+
+body {
+	font-family: 'Space Grotesk', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	-webkit-font-smoothing: antialised;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: blcok;
+	max-width: 100%;
+	vertical-align: middle;
+}
