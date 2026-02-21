@@ -29,10 +29,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
         max-width: 90rem;
         margin-inline: auto;
         padding: 1rem 1.5rem;
         backdrop-filter: blur(10px);
+        background-color: color-mix(in srgb, var(--background) 60%, transparent 40%);
         border-bottom: 1px solid var(--border);
     }
 
@@ -43,7 +46,7 @@
         font-size: 1.3rem;
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: -1;
+        letter-spacing: -.05rem;
         text-decoration: none;
         color: var(--foreground);
     }
