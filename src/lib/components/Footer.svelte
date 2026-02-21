@@ -48,7 +48,7 @@
         list-style-type: none;
     }
 
-    .social_links a {
+    .social_links a:is(:link, :visited) {
         display: flex;
         align-items: center;
         gap: .25rem;
