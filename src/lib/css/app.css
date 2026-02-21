@@ -26,6 +26,8 @@
 
 	/* The "Details" */
 	--muted: var(--graphite); /* Graphite */
+	/* Muted text for DARK backgrounds (Seashell at 60% opacity) */
+	--foreground-muted: color-mix(in srgb, #f7ebe8, transparent 40%);
 	--border: rgba(68, 65, 64, 0.2); /* Faint Graphite */
 	--accent: var(--tangerine-dream); /* Tangerine */
 }
