@@ -1,4 +1,5 @@
 <script>
+    import { resolve } from "$app/paths";
     import InvertedLogo from "$lib/assets/logo-inverted.svg";
 </script>
 
