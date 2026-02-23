@@ -17,9 +17,9 @@
     </nav>
     <div class="social_links">
         <ul class="social_links_list">
-            <li><a href="https://" aria-label="facebook-link"><i class="social_icon i-line-md:facebook"></i></a></li>
-            <li><a href="https://" aria-label="instagram-link"><i class="social_icon i-line-md:instagram"></i></a></li>
-            <li><a href="https://" aria-label="tiktok-link"><i class="social_icon i-line-md:tiktok"></i></a></li>
+            <li><a href={resolve("#")} aria-label="facebook-link"><i class="social_icon i-line-md:facebook"></i></a></li>
+            <li><a href={resolve("#")} aria-label="instagram-link"><i class="social_icon i-line-md:instagram"></i></a></li>
+            <li><a href={resolve("#")} aria-label="tiktok-link"><i class="social_icon i-line-md:tiktok"></i></a></li>
         </ul>
     </div>
 </header>

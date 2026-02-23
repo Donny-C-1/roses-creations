@@ -7,9 +7,9 @@
         <img src={InvertedLogo} alt="Roses Creations" width="70" height="auto" />
         <p class="text">Designed for you</p>
         <ul class="social_links">
-            <li><a href="http://"><i class="i-line-md:facebook"></i>facebook</a></li>
-            <li><a href="http://"><i class="i-line-md:instagram"></i>instagram</a></li>
-            <li><a href="http://"><i class="i-line-md:tiktok"></i>tiktok</a></li>
+            <li><a href={resolve("#")}><i class="i-line-md:facebook"></i>facebook</a></li>
+            <li><a href={resolve("#")}><i class="i-line-md:instagram"></i>instagram</a></li>
+            <li><a href={resolve("#")}><i class="i-line-md:tiktok"></i>tiktok</a></li>
         </ul>
     </div>
     <div class="hashtag">#Roses<wbr>Creations</div>
