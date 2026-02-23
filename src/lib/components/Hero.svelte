@@ -114,4 +114,10 @@
             height: 100%;
         }
     }
+
+    @media screen and (min-width: 54rem) {
+        .large_text {
+            font-size: 6rem;
+        }
+    }
 </style>

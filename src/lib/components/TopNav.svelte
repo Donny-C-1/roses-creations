@@ -37,6 +37,7 @@
         backdrop-filter: blur(10px);
         background-color: color-mix(in srgb, var(--background) 60%, transparent 40%);
         border-bottom: 1px solid var(--border);
+        z-index: 5;
     }
 
     .logo {
