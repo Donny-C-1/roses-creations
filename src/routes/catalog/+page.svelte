@@ -1,5 +1,6 @@
 <script>
 	import { resolve } from "$app/paths";
+    import SEO from "$lib/components/SEO.svelte";
 
     const collection = [
         {
@@ -48,6 +49,8 @@
 
     const filteredCollection = $derived(filterCollection === "all" ? collection : collection.filter(v => v.collection.toLowerCase() === filterCollection))
 </script>
+
+<SEO description="Browse our collection of hand-crafted outfit styles and modern fashion." />
 
 <section>
 	<div class="top">

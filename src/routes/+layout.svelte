@@ -4,14 +4,12 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import Footer from '$lib/components/Footer.svelte';
 	import TopNav from '$lib/components/TopNav.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-	<title>Roses Creations</title>
-</svelte:head>
+<SEO />
 
 <TopNav />
 <main>
