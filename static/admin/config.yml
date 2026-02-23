@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: your-username/your-repo-name # Replace with your actual repo
+  branch: main # or master
+
+media_folder: "static/images/catalog" # Where uploaded photos will go
+public_folder: "/images/catalog"      # How SvelteKit will reference them
+
+collections:
+  - name: "catalog"
+    label: "Product Catalog"
+    folder: "src/lib/data/catalog" # Where the data files will be saved
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Ankara", "Contemporary", "Lace", "Ready-to-Wear"] }
+      - { label: "Product Image", name: "image", widget: "image" }
+      - { label: "Description", name: "body", widget: "markdown" }
