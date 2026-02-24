@@ -2,6 +2,8 @@ backend:
   name: github
   repo: donny-c-1/roses-creations # Replace with your actual repo
   branch: main-branch # or master
+  base_url: https://decap-cms-oauth.vercel.app # The "Gatekeeper" address
+  auth_endpoint: auth
 
 media_folder: "static/images/catalog" # Where uploaded photos will go
 public_folder: "/images/catalog"      # How SvelteKit will reference them
