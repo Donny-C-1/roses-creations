@@ -12,10 +12,12 @@ collections:
   - name: "catalog"
     label: "Product Catalog"
     folder: "src/lib/data/catalog" # Where the data files will be saved
+    extension: "json"
+    format: "json"
     create: true
-    slug: "{{slug}}"
+    slug: "{{title}}"
     fields:
       - { label: "Product Name", name: "title", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", options: ["Ankara", "Contemporary", "Lace", "Ready-to-Wear"] }
+      - { label: "Category", name: "category", widget: "select", options: ["men", "women", "unisex"] }
       - { label: "Product Image", name: "image", widget: "image" }
-      - { label: "Description", name: "body", widget: "markdown" }
+      # - { label: "Description", name: "body", widget: "markdown" }
