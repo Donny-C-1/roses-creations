@@ -2,6 +2,8 @@
 	import { resolve } from "$app/paths";
     import SEO from "$lib/components/SEO.svelte";
 
+    let { data } = $props();
+    
     const collection = [
         {
             imageSrc: "/images/mens-wear-1.png",
@@ -45,9 +47,9 @@
         },
     ]
 
-    let filterCollection = $state("all");
+    let filterCategory = $state("all");
 
-    const filteredCollection = $derived(filterCollection === "all" ? collection : collection.filter(v => v.collection.toLowerCase() === filterCollection))
+    const filteredCollection = $derived(filterCategory === "all" ? data.products : data.products.filter(v => v.category.toLowerCase() === filterCategory))
 </script>
 
 <SEO description="Browse our collection of hand-crafted outfit styles and modern fashion." />
@@ -56,22 +58,22 @@
 	<div class="top">
         <h1>OUR CATALOG</h1>
         <div class="filter">
-            <button class="filter_button active" onclick={filterCollection = "all"}>All</button>
-            <button class="filter_button" onclick={filterCollection = "men"}>Men</button>
-            <button class="filter_button" onclick={filterCollection = "women"}>Women</button>
+            <button class="filter_button active" onclick={filterCategory = "all"}>All</button>
+            <button class="filter_button" onclick={filterCategory = "men"}>Men</button>
+            <button class="filter_button" onclick={filterCategory = "women"}>Women</button>
         </div>
     </div>
 	<div class="collection">
-        {#each filteredCollection as outfit}
+        {#each filteredCollection as product}
             <div class="outfit_card">
-                <div class="outfit_media"><img src={resolve(outfit.imageSrc)} alt={outfit.name} /></div>
+                <div class="outfit_media"><img src={resolve(product.image)} alt={product.title} /></div>
                 <div class="outfit_info">
                     <div class="left_block">
-                        <p class="outfit_name">{outfit.name}</p>
-                        <p class="collection_name">{outfit.collection} COLLECTION</p>
+                        <p class="outfit_name">{product.title}</p>
+                        <p class="collection_name">{product.category} COLLECTION</p>
                     </div>
                     <div>
-                        <p class="price">₦40,000</p>
+                        <p class="price">₦{product.price}</p>
                     </div>
                 </div>
             </div>
